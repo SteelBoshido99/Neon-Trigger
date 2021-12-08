@@ -57,6 +57,8 @@ public class VisualAudio : MonoBehaviour
         AnalyseSound();
     }
 
+
+
     private void AnalyseSound()
     {
         aSource.GetOutputData(sampleRange, 0);
@@ -120,12 +122,14 @@ public class VisualAudio : MonoBehaviour
             //Getting the sum and multiplying it by the multiplyer to be able to see the result of values
             float scaleY = sum / averageSIze * sMultiplyer;
             assetSale[assetIndex] -= Time.deltaTime * smoothSpeed;
+            if(assetSale[assetIndex] < scaleY)
+            {
+                assetSale[assetIndex] = scaleY;
+            }
+
+            assetList[assetIndex].localScale = Vector3.one + Vector3.up * assetSale[assetIndex];
+            assetIndex++;
 
         }
-
     }
-
-
-
-
 }
