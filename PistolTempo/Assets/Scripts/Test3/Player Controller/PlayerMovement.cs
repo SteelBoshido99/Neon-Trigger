@@ -12,6 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     private Camera topCamera;
 
+    //DashFunction
+    public float dashDistance = 10f;
+
+    public const float maxDashTime = 1.0f;
+    public float DashSpeed = 6;
+
     void Start()
     {
         pb = GetComponent<Rigidbody>();
@@ -44,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         pb.velocity = moveVel;
+    }
+
+    void Dash()
+    {
+
     }
 
 
