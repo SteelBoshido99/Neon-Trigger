@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     //DashFunction
     public float dashDistance = 10f;
 
-    public const float maxDashTime = 1.0f;
-    public float DashSpeed = 6;
+    public float maxDashTime;
+    public float DashSpeed = 1;
 
     void Start()
     {
@@ -45,6 +45,10 @@ public class PlayerMovement : MonoBehaviour
             transform.LookAt(new Vector3(lookPoint.x, transform.position.y, lookPoint.z)) ;
         }
 
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            StartCoroutine(Dash());
+        }
+
     }
 
     void FixedUpdate()
@@ -52,8 +56,19 @@ public class PlayerMovement : MonoBehaviour
         pb.velocity = moveVel;
     }
 
-    void Dash()
+    IEnumerator Dash()
     {
+        float startTime = Time.time;
+
+        Debug.Log("You are dashing");
+
+
+        while (Time.time < startTime + maxDashTime)
+        {
+            moveIn = new Vector3(Input.GetAxisRaw("Horizontal") * DashSpeed, 0f, Input.GetAxisRaw("Vertical")*DashSpeed);
+
+            yield return null;
+        }
 
     }
 

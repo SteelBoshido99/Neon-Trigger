@@ -338,6 +338,7 @@ MonoBehaviour:
   speed: 5
   pb: {fileID: 546862720}
   dashDistance: 10
+  maxDashTime: 0
   DashSpeed: 6
 --- !u!23 &546862717
 MeshRenderer:
@@ -523,7 +524,8 @@ MonoBehaviour:
   speed: 5
   pb: {fileID: 1382583800}
   dashDistance: 10
-  DashSpeed: 6
+  maxDashTime: 12
+  DashSpeed: 1
 --- !u!54 &1382583800
 Rigidbody:
   m_ObjectHideFlags: 0
