@@ -311,6 +311,7 @@
 -r:"Library/Bee/artifacts/500b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Test1/AudioReactor.cs"
 "Assets/Scripts/Test2/VisualAudio.cs"
+"Assets/Scripts/Test3/Camera Controls/CameraFollow.cs"
 "Assets/Scripts/Test3/Player Controller/PlayerMovement.cs"
 -langversion:8.0
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
-    public Rigidbody pb;
+    public Rigidbody playerBody;
 
     private Vector3 moveIn;
     private Vector3 moveVel;
@@ -13,14 +13,14 @@ public class PlayerMovement : MonoBehaviour
     private Camera topCamera;
 
     //DashFunction
-    public float dashDistance = 10f;
+    public float DashTime;
+    public float DashSpeed;
 
-    public float maxDashTime;
-    public float DashSpeed = 1;
+    public CharacterController pController;
 
     void Start()
     {
-        pb = GetComponent<Rigidbody>();
+        playerBody = GetComponent<Rigidbody>();
         topCamera = FindObjectOfType<Camera>();
     }
 
@@ -53,19 +53,16 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        pb.velocity = moveVel;
+        playerBody.velocity = moveVel;
     }
 
     IEnumerator Dash()
     {
         float startTime = Time.time;
 
-        Debug.Log("You are dashing");
-
-
-        while (Time.time < startTime + maxDashTime)
+        while(Time.time< startTime + DashTime)
         {
-            moveIn = new Vector3(Input.GetAxisRaw("Horizontal") * DashSpeed, 0f, Input.GetAxisRaw("Vertical")*DashSpeed);
+            pController.Move(moveIn * DashSpeed * Time.deltaTime);
 
             yield return null;
         }
