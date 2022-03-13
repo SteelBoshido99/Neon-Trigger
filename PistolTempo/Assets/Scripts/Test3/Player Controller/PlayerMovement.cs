@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
-    public Rigidbody playerBody;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private Rigidbody playerBody;
 
     private Vector3 moveIn;
     private Vector3 moveVel;
-
     private Camera topCamera;
 
     //DashFunction
-    public float DashTime;
-    public float DashSpeed;
+    [SerializeField] private float DashTime;
+    [SerializeField] private float DashSpeed;
+    [SerializeField] private CharacterController pController;    
 
-    public CharacterController pController;
+    public float getSpeed()
+    {
+        return speed;
+    }
+    public void setSpeed(float nSpeed)
+    {
+        speed = nSpeed;
+    }
 
     void Start()
     {
@@ -58,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Dash()
     {
-        float startTime = Time.time;
+       float startTime = Time.time;
 
         while(Time.time< startTime + DashTime)
         {

@@ -309,6 +309,8 @@
 -r:"Library/Bee/artifacts/500b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/500b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Low Poly Flat Sci Fi Assets/Demo/Scripts/DoubleSlidingDoorController.cs"
+"Assets/Low Poly Flat Sci Fi Assets/Demo/Scripts/FlickeringLight.cs"
 "Assets/Scripts/Test1/AudioReactor.cs"
 "Assets/Scripts/Test2/VisualAudio.cs"
 "Assets/Scripts/Test3/Camera Controls/CameraFollow.cs"
