@@ -314,6 +314,7 @@
 "Assets/Scripts/Test1/AudioReactor.cs"
 "Assets/Scripts/Test2/VisualAudio.cs"
 "Assets/Scripts/Test3/Camera Controls/CameraFollow.cs"
+"Assets/Scripts/Test3/Player Controller/Firing.cs"
 "Assets/Scripts/Test3/Player Controller/PlayerMovement.cs"
 -langversion:8.0
 
