@@ -15,7 +15,6 @@ public class Firing : MonoBehaviour
 
     private void Start()
     {
-        bulletNum = 1;
         chosenBullet = bullet;
     }
 
@@ -23,14 +22,14 @@ public class Firing : MonoBehaviour
     private void Update()
     {
         //logic to allow the player to switch between bullets
-        if (bulletNum == 2 || Input.GetButtonDown("Change"))
+        if (Input.GetButtonDown("Change"))
         {           
             chosenBullet = bullet;
             bulletNum = 1;
         }
 
         //logic to allow the player to switch between bullets
-        if (bulletNum == 1 || Input.GetButtonDown("Change"))
+        if (Input.GetButtonDown("Change"))
         {         
             chosenBullet = bullet2;
             bulletNum = 2;

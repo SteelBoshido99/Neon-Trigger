@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0699158, g: 0.07670555, b: 0.08718669, a: 1}
+  m_IndirectSpecularColor: {r: 0.0568119, g: 0.056117468, b: 0.05125694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -971,7 +971,7 @@ PrefabInstance:
     - target: {fileID: 246930636996096281, guid: 8b0bd51a34b5cab429cf870cdb89bc4b,
         type: 3}
       propertyPath: m_Convex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 268750693854210954, guid: 8b0bd51a34b5cab429cf870cdb89bc4b,
         type: 3}
@@ -1903,7 +1903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &2055250580
 Light:
   m_ObjectHideFlags: 0
@@ -2270,6 +2270,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.218
       objectReference: {fileID: 0}
+    - target: {fileID: 5159539164542328796, guid: a14844c4c36258243877bd65d5ecf9cb,
+        type: 3}
+      propertyPath: bullVelocity
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5159539164542328797, guid: a14844c4c36258243877bd65d5ecf9cb,
         type: 3}
       propertyPath: m_Name
@@ -2279,6 +2284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159539164542328799, guid: a14844c4c36258243877bd65d5ecf9cb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a14844c4c36258243877bd65d5ecf9cb, type: 3}
