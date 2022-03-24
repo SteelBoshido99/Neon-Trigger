@@ -22,17 +22,19 @@ public class Firing : MonoBehaviour
     private void Update()
     {
         //logic to allow the player to switch between bullets
-        if (Input.GetButtonDown("Change"))
+        if (Input.GetKeyDown("1"))
         {           
             chosenBullet = bullet;
-            bulletNum = 1;
+            Debug.Log("Back to the OG bullet");
+            //bulletNum = 1;
         }
 
         //logic to allow the player to switch between bullets
-        if (Input.GetButtonDown("Change"))
-        {         
+        if (Input.GetKeyDown("2"))
+        {
             chosenBullet = bullet2;
-            bulletNum = 2;
+            Debug.Log("Second bullet");
+            //bulletNum = 2;
         }
 
 
