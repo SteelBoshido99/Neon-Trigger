@@ -7,7 +7,7 @@ public class Firing : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject bullet2;
 
-    private int bulletNum;
+    private bool bulletNum;
 
     private GameObject chosenBullet;
 
@@ -16,26 +16,16 @@ public class Firing : MonoBehaviour
     private void Start()
     {
         chosenBullet = bullet;
+        bulletNum = true;
     }
 
 
     private void Update()
     {
-        //logic to allow the player to switch between bullets
-        if (Input.GetKeyDown("1"))
-        {           
-            chosenBullet = bullet;
-            Debug.Log("Back to the OG bullet");
-            //bulletNum = 1;
+        if (Input.GetButtonDown("Switch")){
+            bulletSwitch();
         }
 
-        //logic to allow the player to switch between bullets
-        if (Input.GetKeyDown("2"))
-        {
-            chosenBullet = bullet2;
-            Debug.Log("Second bullet");
-            //bulletNum = 2;
-        }
 
 
 
@@ -45,6 +35,26 @@ public class Firing : MonoBehaviour
             GameObject ball = Instantiate(chosenBullet, transform.position, transform.rotation);
 
             ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(bullVelocity, 0, 0));
+        }
+    }
+
+
+
+    private void bulletSwitch()
+    {
+        //logic to allow the player to switch between bullets
+        if (!bulletNum)
+        {
+            chosenBullet = bullet;
+            Debug.Log("Back to the OG bullet");
+            bulletNum = true;
+
+        }
+        else if (bulletNum)
+        {
+            chosenBullet = bullet2;
+            Debug.Log("Second bullet");
+            bulletNum = false;
         }
     }
 
