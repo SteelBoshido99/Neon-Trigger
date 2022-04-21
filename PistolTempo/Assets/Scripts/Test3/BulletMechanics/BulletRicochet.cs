@@ -5,10 +5,11 @@ using UnityEngine;
 public class BulletRicochet : MonoBehaviour
 {
     [SerializeField] private float bulletLife = 3.0f;
-    public LayerMask collision;
-    // Update is called once per frame
+    [SerializeField] private LayerMask collision;
+    
     void Update()
     {
+        //Uses raycasting to hold the position and the direction the bullet is travelling in
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit impact;
 
@@ -19,6 +20,7 @@ public class BulletRicochet : MonoBehaviour
             transform.eulerAngles = new Vector3(0, rotation, 0);
         }
 
+        //Time of death for the bullet
         GameObject bullet = this.gameObject;
         Destroy(bullet, bulletLife);
 

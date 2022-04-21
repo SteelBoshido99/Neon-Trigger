@@ -316,6 +316,7 @@
 "Assets/Scripts/Test2/VisualAudio.cs"
 "Assets/Scripts/Test3/BulletMechanics/BulletRicochet.cs"
 "Assets/Scripts/Test3/Camera Controls/CameraFollow.cs"
+"Assets/Scripts/Test3/Enemy script/EnemyHp.cs"
 "Assets/Scripts/Test3/Player Controller/Firing.cs"
 "Assets/Scripts/Test3/Player Controller/PlayerMovement.cs"
 -langversion:8.0
