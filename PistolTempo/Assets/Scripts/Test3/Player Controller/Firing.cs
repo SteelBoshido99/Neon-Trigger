@@ -46,14 +46,14 @@ public class Firing : MonoBehaviour
         if (!bulletNum)
         {
             chosenBullet = bullet;
-            Debug.Log("Back to the OG bullet");
+            //Debug.Log("Back to the OG bullet");
             bulletNum = true;
 
         }
         else if (bulletNum)
         {
             chosenBullet = bullet2;
-            Debug.Log("Second bullet");
+            //Debug.Log("Second bullet");
             bulletNum = false;
         }
     }

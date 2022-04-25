@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class EnemyHp : MonoBehaviour
 {
-    GameObject enemyType;
+    public int enemyHealth;
+
+    private void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()

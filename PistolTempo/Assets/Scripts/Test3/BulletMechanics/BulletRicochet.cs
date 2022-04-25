@@ -15,6 +15,7 @@ public class BulletRicochet : MonoBehaviour
 
         if (Physics.Raycast(ray, out impact, Time.deltaTime + 0.05f, collision))
         {
+            //This then calculates the trajectory of the bullet after it hits another object (Not including enemies)
             Vector3 ricochetDir = Vector3.Reflect(ray.direction, impact.normal);
             float rotation = 90 - Mathf.Atan2(ricochetDir.z, ricochetDir.x) * Mathf.Rad2Deg;
             transform.eulerAngles = new Vector3(0, rotation, 0);
