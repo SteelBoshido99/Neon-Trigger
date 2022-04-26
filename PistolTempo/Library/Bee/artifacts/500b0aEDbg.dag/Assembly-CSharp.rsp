@@ -320,6 +320,7 @@
 "Assets/Scripts/NeonTrigger/GameF Scripts/hbController.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/Firing.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/n2PlayerHealth.cs"
+"Assets/Scripts/NeonTrigger/Player Scripts/n3PlayerHealth.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/PlayerHealth.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/PlayerMovement.cs"
 -langversion:8.0
