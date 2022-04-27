@@ -317,6 +317,7 @@
 "Assets/Scripts/NeonTrigger/Camera Controls/CameraFollow.cs"
 "Assets/Scripts/NeonTrigger/Enemy script/EnemyDamageT.cs"
 "Assets/Scripts/NeonTrigger/Enemy script/EnemyHp.cs"
+"Assets/Scripts/NeonTrigger/Enemy script/RedDamage.cs"
 "Assets/Scripts/NeonTrigger/GameF Scripts/hbController.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/Firing.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/n2PlayerHealth.cs"

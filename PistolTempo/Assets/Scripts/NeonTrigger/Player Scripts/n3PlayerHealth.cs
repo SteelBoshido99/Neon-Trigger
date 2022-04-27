@@ -7,9 +7,10 @@ public class n3PlayerHealth : MonoBehaviour
     private float cHealth;
     [SerializeField] private float lagTime;
     [SerializeField] private float mxHealth = 100f;
-    [SerializeField] private float chipSpeed = 2f;
+    [SerializeField] private float chipSpeed = 1.0f;
     [SerializeField] private Image frontBar;
     [SerializeField] private Image backBar;
+    [SerializeField] private Text display;
 
     // Start is called before the first frame update
     void Start()
@@ -26,13 +27,13 @@ public class n3PlayerHealth : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            TestDamage(Random.Range(2.0f, 10.0f));
+            TestDamage(Random.Range(5, 10));
         }
     }
 
     public void uiUpdate()
     {
-        Debug.Log("You health is " + cHealth + "%");
+        display.text = cHealth + "%";
         float frontFill = frontBar.fillAmount;
         float backFill = backBar.fillAmount;
         float hpFraction = cHealth / mxHealth;
@@ -44,6 +45,7 @@ public class n3PlayerHealth : MonoBehaviour
             backBar.color = Color.red;
             lagTime += Time.deltaTime;
             float complete = lagTime / chipSpeed;
+            complete = complete * complete;
             backBar.fillAmount = Mathf.Lerp(backFill, hpFraction, complete);
         }
     }
