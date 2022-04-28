@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3674448307087199560}
   - component: {fileID: 2004257050301814909}
   - component: {fileID: -6533656463820951007}
-  - component: {fileID: -5786167341202028685}
+  - component: {fileID: -5233210905277560597}
   m_Layer: 0
   m_Name: TestBullet2
   m_TagString: Blue
@@ -132,7 +132,7 @@ MonoBehaviour:
   collision:
     serializedVersion: 2
     m_Bits: 64
---- !u!114 &-5786167341202028685
+--- !u!114 &-5233210905277560597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

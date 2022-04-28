@@ -6,7 +6,7 @@ public class n3PlayerHealth : MonoBehaviour
 {
     private float cHealth;
     [SerializeField] private float lagTime;
-    [SerializeField] private float mxHealth = 100f;
+    [SerializeField] private int mxHealth = 100;
     [SerializeField] private float chipSpeed = 1.0f;
     [SerializeField] private Image frontBar;
     [SerializeField] private Image backBar;

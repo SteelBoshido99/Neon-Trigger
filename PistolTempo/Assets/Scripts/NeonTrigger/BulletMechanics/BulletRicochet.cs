@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletRicochet : MonoBehaviour
 {
-    [SerializeField] private float bulletLife = 3.0f;
+    [SerializeField] private float bulletLife = 2.0f;
     [SerializeField] private LayerMask collision;
     
     void Update()
