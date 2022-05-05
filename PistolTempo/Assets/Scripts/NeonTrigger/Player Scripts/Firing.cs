@@ -6,8 +6,9 @@ public class Firing : MonoBehaviour
 {
     [SerializeField] private GameObject bullet;
     [SerializeField] private GameObject bullet2;
-
+    private Vector3 Rotation = new Vector3 (0, 0, -90);
     private bool bulletNum;
+   
 
     private GameObject chosenBullet;
 
@@ -32,9 +33,9 @@ public class Firing : MonoBehaviour
         if (Input.GetButtonDown("Shoot1"))
         {
             //Creates an instance of pointed prefab
-            GameObject ball = Instantiate(chosenBullet, transform.position, transform.rotation);
+            GameObject newBullet = Instantiate(chosenBullet, transform.position, transform.rotation);
 
-            ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(bullVelocity, 0, 0));
+            newBullet.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(bullVelocity, 0, 0));
         }
     }
 
