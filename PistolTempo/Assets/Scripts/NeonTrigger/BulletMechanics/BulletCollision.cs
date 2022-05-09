@@ -16,6 +16,7 @@ public class BulletCollision : MonoBehaviour
             Destroy(bullet);
         }
 
+
     }
 
     public void particleImpact()
