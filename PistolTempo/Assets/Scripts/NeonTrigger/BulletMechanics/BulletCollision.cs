@@ -19,7 +19,7 @@ public class BulletCollision : MonoBehaviour
 
     }
 
-    public void particleImpact()
+    private void particleImpact()
     {
         //Play the particle effect
         GameObject impact = Instantiate(particle, transform.position, transform.rotation);

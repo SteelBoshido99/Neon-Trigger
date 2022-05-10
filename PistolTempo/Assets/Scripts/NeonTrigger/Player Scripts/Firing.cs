@@ -27,7 +27,7 @@ public class Firing : MonoBehaviour
             bulletSwitch();
         }
 
-
+        
 
 
         if (Input.GetButtonDown("Shoot1"))

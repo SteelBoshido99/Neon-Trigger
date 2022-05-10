@@ -9,11 +9,22 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float walkRadius;
     [SerializeField] private LayerMask walkArea;
     [SerializeField] private Transform player;
+    [SerializeField] private GameObject enemyBullet;
+    [SerializeField] private float bulletVelocity;
+    [SerializeField] private float delay;
 
-    
+    private bool attacked;
+    private GameObject projectile;
+
+    private void Start()
+    {
+        projectile = enemyBullet;
+    }
+
     void Update()
     {
         enemyAgent.SetDestination(randomNavigation(walkRadius));
+        Attack();
     }
 
 
@@ -38,6 +49,25 @@ public class EnemyAI : MonoBehaviour
     {
         enemyAgent.SetDestination(transform.position);
         transform.LookAt(player);
+
+        if (!attacked)
+        {
+            GameObject enemyShot = Instantiate(projectile, transform.position, transform.rotation);
+
+            enemyShot.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(bulletVelocity, 0, 0));
+
+            attacked = true;
+            Invoke(nameof(AttackDelay), delay);
+
+        }
+
+
+    }
+
+
+    private void AttackDelay()
+    {
+        attacked = false;
     }
 
 

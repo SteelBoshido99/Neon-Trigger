@@ -314,6 +314,7 @@
 "Assets/Prefabs/Materials/QuickOutline/Scripts/Outline.cs"
 "Assets/Scripts/NeonTrigger/BulletMechanics/BulletCollision.cs"
 "Assets/Scripts/NeonTrigger/BulletMechanics/BulletRicochet.cs"
+"Assets/Scripts/NeonTrigger/BulletMechanics/enemyBulletCollision.cs"
 "Assets/Scripts/NeonTrigger/Camera Controls/CameraFollow.cs"
 "Assets/Scripts/NeonTrigger/Enemy script/bEnemyDamage.cs"
 "Assets/Scripts/NeonTrigger/Enemy script/EnemyAI.cs"

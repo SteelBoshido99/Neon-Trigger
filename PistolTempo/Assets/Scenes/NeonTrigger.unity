@@ -12255,6 +12255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1047724519691324, guid: 08f5427fe0d15ad47a5a1bb70b6156c7, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4953570177729582, guid: 08f5427fe0d15ad47a5a1bb70b6156c7, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -14009,9 +14013,26 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 842835516, guid: 6653ee069da565f40905c7c1d244915a, type: 3}
+      propertyPath: delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 842835516, guid: 6653ee069da565f40905c7c1d244915a, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1382583804}
+    - target: {fileID: 842835516, guid: 6653ee069da565f40905c7c1d244915a, type: 3}
+      propertyPath: enemyBullet
+      value: 
+      objectReference: {fileID: 4939334545257644112, guid: 71ef5c9ee82998247afd134235667997,
+        type: 3}
+    - target: {fileID: 842835516, guid: 6653ee069da565f40905c7c1d244915a, type: 3}
+      propertyPath: bulletVelocity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 842835516, guid: 6653ee069da565f40905c7c1d244915a, type: 3}
+      propertyPath: walkArea.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9145093659567680, guid: 6653ee069da565f40905c7c1d244915a, type: 3}
       propertyPath: m_Name
       value: BlueEnemy
