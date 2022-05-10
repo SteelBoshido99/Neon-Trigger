@@ -12,14 +12,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private GameObject enemyBullet;
     [SerializeField] private float bulletVelocity;
     [SerializeField] private float delay;
+    [SerializeField] private GameObject shootPoint;
 
     private bool attacked;
-    private GameObject projectile;
-
-    private void Start()
-    {
-        projectile = enemyBullet;
-    }
 
     void Update()
     {
@@ -52,7 +47,7 @@ public class EnemyAI : MonoBehaviour
 
         if (!attacked)
         {
-            GameObject enemyShot = Instantiate(projectile, transform.position, transform.rotation);
+            GameObject enemyShot = Instantiate(enemyBullet, shootPoint.transform.position, shootPoint.transform.rotation);
 
             enemyShot.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(bulletVelocity, 0, 0));
 
