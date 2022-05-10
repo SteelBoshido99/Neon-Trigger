@@ -323,7 +323,6 @@
 "Assets/Scripts/NeonTrigger/GM Scripts/hbController.cs"
 "Assets/Scripts/NeonTrigger/GM Scripts/MenuNavigation.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/Firing.cs"
-"Assets/Scripts/NeonTrigger/Player Scripts/n2PlayerHealth.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/n3PlayerHealth.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/PlayerHealth.cs"
 "Assets/Scripts/NeonTrigger/Player Scripts/PlayerMovement.cs"
