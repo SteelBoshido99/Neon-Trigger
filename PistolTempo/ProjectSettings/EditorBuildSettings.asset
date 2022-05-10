@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0270903bb399af14dbbc04947ec7f9b0
+  - enabled: 1
+    path: Assets/Scenes/NeonTrigger.unity
+    guid: b8bb74cb70c153d43ad84143a4bff87b
   m_configObjects: {}

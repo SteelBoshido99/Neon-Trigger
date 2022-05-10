@@ -5,30 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MenuNavigation : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void StartGame()
     {
-
+        SceneManager.LoadScene("NeonTrigger");
     }
 
     public void QuitGame()
     {
-
+        Application.Quit();
+        Debug.Log("Game has stopped");
     }
 
     public void ReturnMainMenu()
     {
-
+        SceneManager.LoadScene("MainMenu");
     }
 }
