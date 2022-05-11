@@ -11,6 +11,7 @@ public class n3PlayerHealth : MonoBehaviour
     [SerializeField] private Image frontBar;
     [SerializeField] private Image backBar;
     [SerializeField] private Text display;
+    [SerializeField] private GameObject gameOverUI;
 
     // Start is called before the first frame update
     void Start()
@@ -23,15 +24,22 @@ public class n3PlayerHealth : MonoBehaviour
     {
         //Ensures the player's HP doesn't fall below 0 and go above max HP
         cHealth = Mathf.Clamp(cHealth, 0, mxHealth);
-        uiUpdate();
+        HealthBarUpdate();
 
-        if (Input.GetKeyDown(KeyCode.K))
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    TakeDamage(Random.Range(5, 10));
+        //}
+
+        if(cHealth <= 0)
         {
-            TestDamage(Random.Range(5, 10));
+            Time.timeScale = 0f;
+            gameOverUI.SetActive(true);
+
         }
     }
 
-    public void uiUpdate()
+    public void HealthBarUpdate()
     {
         display.text = cHealth + "%";
         float frontFill = frontBar.fillAmount;
@@ -50,7 +58,7 @@ public class n3PlayerHealth : MonoBehaviour
         }
     }
 
-    public void TestDamage(float damage)
+    public void TakeDamage(float damage)
     {
         cHealth -= damage;
         lagTime = 0f;
