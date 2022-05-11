@@ -5,21 +5,40 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private NavMeshAgent enemyAgent;
+   
     [SerializeField] private float walkRadius;
-    [SerializeField] private LayerMask walkArea;
-    [SerializeField] private Transform player;
+    [SerializeField] private LayerMask walkArea, thePlayer;
     [SerializeField] private GameObject enemyBullet;
     [SerializeField] private float bulletVelocity;
     [SerializeField] private float delay;
     [SerializeField] private GameObject shootPoint;
+    [SerializeField] private float attackRange, sightRange;
 
-    private bool attacked;
+    private Transform player;
+    private NavMeshAgent enemyAgent;
+    private bool attacked, inSightRange, inAttackRange;
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player").transform;
+        enemyAgent = GetComponent<NavMeshAgent>();
+    }
 
     void Update()
     {
-        enemyAgent.SetDestination(randomNavigation(walkRadius));
-        Attack();
+        //Checks to see if the player is in range of sight and attack
+        inSightRange = Physics.CheckSphere(transform.position, sightRange, thePlayer);
+        inAttackRange = Physics.CheckSphere(transform.position, attackRange, thePlayer);
+
+        //Some conditions to make it so that the enemy patrolls and shoots at the player
+        if(!inSightRange && !inAttackRange)
+        {
+            enemyAgent.SetDestination(randomNavigation(walkRadius));
+        }
+        if (inSightRange && inAttackRange)
+        {
+            Attack();
+        }      
     }
 
 
@@ -46,19 +65,16 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(player);
 
         if (!attacked)
-        {
+        {   //instatiates the enemy bullet on the shoot point, which is a seperate game object
             GameObject enemyShot = Instantiate(enemyBullet, shootPoint.transform.position, shootPoint.transform.rotation);
-
             enemyShot.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(bulletVelocity, 0, 0));
 
+            //Makes it so that the enemy doesn't machine gun the player to death.
             attacked = true;
             Invoke(nameof(AttackDelay), delay);
 
         }
-
-
     }
-
 
     private void AttackDelay()
     {

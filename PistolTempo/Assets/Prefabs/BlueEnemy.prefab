@@ -127,7 +127,7 @@ Transform:
   m_GameObject: {fileID: 9145093659567680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.22, y: 0, z: 12.41}
-  m_LocalScale: {x: 1.5724, y: 2.9375, z: 1}
+  m_LocalScale: {x: 1.5724, y: 4.5073, z: 1}
   m_Children:
   - {fileID: 610323517}
   m_Father: {fileID: 0}
@@ -223,17 +223,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68d0ed79492aa204c9dc90f7b4e29d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAgent: {fileID: 842835517}
   walkRadius: 50
   walkArea:
     serializedVersion: 2
     m_Bits: 8
-  player: {fileID: 0}
+  thePlayer:
+    serializedVersion: 2
+    m_Bits: 128
   enemyBullet: {fileID: 4939334545257644112, guid: 71ef5c9ee82998247afd134235667997,
     type: 3}
   bulletVelocity: 600
   delay: 5
   shootPoint: {fileID: 610323516}
+  attackRange: 20
+  sightRange: 30
 --- !u!195 &842835517
 NavMeshAgent:
   m_ObjectHideFlags: 0
