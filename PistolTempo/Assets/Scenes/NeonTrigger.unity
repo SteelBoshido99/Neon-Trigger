@@ -14110,6 +14110,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1382583799, guid: 08f5427fe0d15ad47a5a1bb70b6156c7, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382583801, guid: 08f5427fe0d15ad47a5a1bb70b6156c7, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1382583805, guid: 08f5427fe0d15ad47a5a1bb70b6156c7, type: 3}
       propertyPath: backBar
       value: 

@@ -232,10 +232,10 @@ MonoBehaviour:
     m_Bits: 128
   enemyBullet: {fileID: 4939334545257644112, guid: 71ef5c9ee82998247afd134235667997,
     type: 3}
-  bulletVelocity: 600
+  bulletVelocity: 700
   delay: 2
   shootPoint: {fileID: 610323516}
-  attackRange: 10
+  attackRange: 15
   sightRange: 20
 --- !u!195 &842835517
 NavMeshAgent:

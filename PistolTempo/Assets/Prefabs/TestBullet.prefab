@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4612967451950618462}
   - component: {fileID: -9189165114216522335}
   - component: {fileID: -3390800699198614745}
-  - component: {fileID: 8224975790021066829}
+  - component: {fileID: 5113140947244949721}
   m_Layer: 0
   m_Name: TestBullet
   m_TagString: Red
@@ -214,7 +214,7 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!114 &8224975790021066829
+--- !u!114 &5113140947244949721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7950969658217257296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b63e3e82b7ba4ca48b2c3c74a27afa9e, type: 3}
+  m_Script: {fileID: 11500000, guid: 27f300e64aac7a044b875d2e8df5f5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 2423140346464793902, guid: bda02adeec246fe46847ae92342738bb,
